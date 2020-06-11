@@ -56,7 +56,7 @@
   },
   "scripts": {
     "start:local": "cross-env CLIENT_ENV=local react-app-rewired start",
-    "start": "react-scripts start",
+    "start": "cross-env CLIENT_ENV=production react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

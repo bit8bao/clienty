@@ -1,3 +1,4 @@
+// @ts-ignore
 import environment from 'environment';
 import NavigationResponseModel from './Models/Navigation/NavigationResponseModel';
 import HttpErrorResponseModel from '../../Models/API/HttpErrorResponseModel';
