@@ -20,7 +20,7 @@ import { Store } from 'redux';
     };
     const history: History = createBrowserHistory();
     const store: Store<IStore> = rootStore(initialState, history);
-    const rootEl: HTMLElement | null = document.getElementById('root');
+    const rootEl: HTMLElement | null = document.getElementById('js-reactApp');
 
     const render = (Component: any, el: HTMLElement | null) => {
         ReactDOM.render(
