@@ -9,6 +9,7 @@ import IStore from '../../../Models/IStore';
 import { connect } from 'react-redux';
 import IBreadcrumb from '../../../Models/IBreadcrumbs';
 import MetaAction from '../../../Stores/Meta/MetaAction';
+import TopBar from "../../Nav/TopBar/TopBar";
 
 interface IProps {
   readonly title: string;
@@ -34,6 +35,7 @@ class Page extends React.Component<IProps & IStateToProps & ReduxProps<any>, ISt
 
     return (
         <>
+          <TopBar />
           <Grid fluid={true} className={styles.wrapper}>
             <div className={styles.titleWrapper}>
               <Text size={TextSizeEnum.Title1} dataAutomation={componentName} className={styles.title}>
