@@ -1,18 +1,16 @@
 import styles from './LeftNavigation.module.scss';
-
 import React from 'react';
 import { connect } from 'react-redux';
 import { ReduxProps } from '../../../Models/ReduxProps';
 import IStore from '../../../Models/IStore';
 import INavigation from '../../../Selector/Navigation/Models/INavigation';
 import INav from '../../../Models/INavigation';
-import iconsTopNav from '../../Components/Icons/_iconsTopNav';
 import {getTopNavigation} from '../../../Selector/Navigation/NavigationSelector';
 import Text, { TextSizeEnum } from '../../Components/Text/Text';
-
 import classNames from "classnames";
 import {Link} from "react-router-dom";
 import NavigationAction from "../../../Stores/Navigation/NavigationAction";
+import Enos from '../../Components/Icons/ensodata.png'
 
 
 interface IProps {}
@@ -29,11 +27,11 @@ class LeftNavigation extends React.Component<IProps & IStateToProps & ReduxProps
 
   public componentDidMount() {
     let navigation: INav[] = [{
-      id: '96f81998-058a-45e3-9c85-e3e718ce67c8',
+      id: '0000-0000-1111-1111',
       parentId: '',
-      name: 'Machines',
+      name: 'Ensodata',
       url: '/',
-      icon: 'Machines',
+      icon: 'Pineapple',
       description: '',
       children: []
     }];
@@ -49,12 +47,11 @@ class LeftNavigation extends React.Component<IProps & IStateToProps & ReduxProps
             [styles.btn]: true,
             [styles.isActive]: model.isActive,
           });
-          const Icon: any = iconsTopNav[model.icon] || iconsTopNav.Default;
 
           return (
               <li key={model.name} id={model.name}>
                 <Link to={model.url} className={cssClasses}>
-                  <Icon className={styles.icon} />
+                  <img src={Enos} width="50" alt='Enosdata'/>
                   <Text size={TextSizeEnum.Caption2} dataAutomation={model.name}>
                     {model.name}
                   </Text>
