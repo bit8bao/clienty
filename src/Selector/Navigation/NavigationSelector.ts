@@ -8,7 +8,7 @@ import { oc } from 'ts-optchain';
 export class NavigationSelector {
   public static getTopNavigation(topLevels: NavigationModel[], location: Location): INavigation[] {
     return topLevels.map(
-      (model: NavigationModel): INavigation => {
+      (model: NavigationModel, index): INavigation => {
         const groupNav: NavigationModel[] = oc(model).children[0].children([]);
         const childUrls: string[] = groupNav.map((childModel: NavigationModel) => childModel.url);
 

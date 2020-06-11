@@ -11,6 +11,7 @@ import classNames from "classnames";
 import {Link} from "react-router-dom";
 import NavigationAction from "../../../Stores/Navigation/NavigationAction";
 import Enos from '../../Components/Icons/ensodata.png'
+import iconsTopNav from '../../Components/Icons/_iconsTopNav';
 
 
 interface IProps {}
@@ -34,7 +35,17 @@ class LeftNavigation extends React.Component<IProps & IStateToProps & ReduxProps
       icon: 'Pineapple',
       description: '',
       children: []
-    }];
+    },
+      {
+        id: '0000-0000-1111-1111',
+        parentId: '',
+        name: 'Admin',
+        url: '/admin',
+        icon: 'Admin',
+        description: '',
+        children: []
+      }
+    ];
 
     this.props.dispatch(NavigationAction.initial(navigation));
   }
@@ -47,11 +58,13 @@ class LeftNavigation extends React.Component<IProps & IStateToProps & ReduxProps
             [styles.btn]: true,
             [styles.isActive]: model.isActive,
           });
+          const Icon: any = iconsTopNav[model.icon] || null;
 
           return (
               <li key={model.name} id={model.name}>
                 <Link to={model.url} className={cssClasses}>
-                  <img src={Enos} width="50" alt='Enosdata'/>
+                  { !Icon && <img src={Enos} width="50" alt='Enosdata'/> }
+                  { Icon && <Icon className={styles.icon} /> }
                   <Text size={TextSizeEnum.Caption2} dataAutomation={model.name}>
                     {model.name}
                   </Text>

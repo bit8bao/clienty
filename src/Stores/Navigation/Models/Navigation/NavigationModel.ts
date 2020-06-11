@@ -3,11 +3,11 @@ import { BaseModel } from 'sjs-base-model';
 /*
     // Returned Api Data Sample
     {
-      "id": "b2aa3835-d0af-45a5-a80e-f9beccb6ba8b",
+      "id": "0000-0000-1111-1111",
       "parentId": null,
-      "name": "Work Orders",
-      "url": "/WorkOrder",
-      "icon": "WorkOrders",
+      "name": "Ensodata",
+      "url": "/",
+      "icon": "Ensodata",
       "description": null
       "children": []
     }

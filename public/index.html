@@ -26,13 +26,24 @@
     -->
     <title>Ensodata</title>
   </head>
-  <body>
+  <body class="!nav-toggle">
+  <script src="%PUBLIC_URL%/jquery/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (document.cookie.indexOf('hideNav=true') > -1) {
+      document.getElementsByTagName('body')[0].classList.add('nav-toggle');
+    }
+  </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div class="app">
     <aside id="js-reactNav" class="app-sidebar"></aside>
-    <main class="app-main">
-      <div id="js-reactApp">
+    <main  class="app-main">
+      <div id="js-reactApp"></div>
+      <div>
+        <hr />
       </div>
     </main>
+  </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

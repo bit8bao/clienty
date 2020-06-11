@@ -22,9 +22,8 @@ class Home extends React.Component<IProps & IStateToProps & ReduxProps<any>, ISt
 
       return (
           // @ts-ignore
-          <Page title="HomePage">
+          <Page title="Ensodata">
             <div className={styles.wrapper}>
-                Home
             </div>
         </Page>
     );
