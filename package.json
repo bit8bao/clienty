@@ -23,7 +23,7 @@
     "@types/reselect": "^2.2.0",
     "@types/uuid": "^8.0.0",
     "@types/webpack-env": "^1.15.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-plugin-ts-optchain": "^1.1.5",
     "bootstrap": "^4.5.0",
     "classnames": "^2.2.6",
